@@ -1,0 +1,56 @@
+{
+  "name": "authentication",
+  "version": "1.0.0",
+  "description": "Node Express Based Microservice",
+  "scripts": {
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "build": "npm run build-ts && npm run tslint",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "start": "npm run watch",
+    "watch": "concurrently \"npm run watch-ts\" \"nodemon dist/server.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prathameshthorat/authentication.git"
+  },
+  "author": "prathamesh thorat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prathameshthorat/authentication.git/issues"
+  },
+  "homepage": "https://github.com/prathameshthorat/authentication.git#readme",
+  "dependencies": {
+    "async": "^2.6.0",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.2",
+    "connect-mongo": "^2.0.1",
+    "express": "^4.16.3",
+    "jwt-simple": "^0.5.1",
+    "mongoose": "^5.0.10",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^2.2.1"
+  },
+  "devDependencies": {
+    "@types/async": "^2.0.48",
+    "@types/bcryptjs": "^2.4.1",
+    "@types/body-parser": "^1.16.8",
+    "@types/compression": "0.0.36",
+    "@types/connect-mongo": "0.0.35",
+    "@types/express": "^4.11.1",
+    "@types/jwt-simple": "^0.5.33",
+    "@types/mongodb": "^3.0.8",
+    "@types/mongoose": "^5.0.7",
+    "@types/morgan": "^1.7.35",
+    "@types/node": "^9.4.7",
+    "@types/passport": "^0.4.3",
+    "@types/passport-jwt": "^3.0.1",
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.17.2",
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.2"
+  }
+}
